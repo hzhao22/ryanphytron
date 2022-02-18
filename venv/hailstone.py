@@ -6,15 +6,17 @@ print ("Hail Stone")
 
 def hailStone(n):
     numbers = []
-    while (n != 1):
+    while ( 1 not in numbers):
         if n % 2 == 0:
             n = n/2
         else:
             n = 3 * n + 1
-        numbers.append(n)
+        numbers.append(int(n))
     return numbers
 
-print(hailStone(50))
+for i in range(1, 31):
+    mylist = hailStone(i)
+    print(i, len(mylist), max(mylist))
 
 
 
